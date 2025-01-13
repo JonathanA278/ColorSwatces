@@ -1,177 +1,141 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Development Services</title>
+  <title>Shoe Store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .shoe-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .shoe-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .shoe-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #ddd;
+    }
+
     .color-swatch {
       width: 30px;
       height: 30px;
       border-radius: 50%;
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
     }
+
     .color-swatch:hover {
-      border: 2px solid #000;
+      border-color: #000;
     }
-    .portfolio-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
+
+    .shoe-title {
+      margin: 10px 0;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #28a745;
+    }
+
+    .btn-buy {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h1>Professional Website Development</h1>
-      <p class="lead">We build custom websites that drive results for your business.</p>
-      <a href="#contact" class="btn btn-light btn-lg">Get a Quote</a>
-    </div>
+  <header class="bg-dark text-white text-center py-4">
+    <h1>Shoe Store</h1>
+    <p>Find your perfect fit and style!</p>
   </header>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">WebDevPro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>About Us</h2>
-          <p>We specialize in creating responsive, modern, and user-friendly websites tailored to your business needs. Our goal is to help you stand out online. We do script-based web development, creating dynamic and interactive websites using languages like JavaScript, Python, and PHP. With a focus on seamless functionality and user experience, I build responsive designs, integrate APIs, and optimize web performance. Whether it’s crafting efficient front-end interfaces or developing robust back-end solutions, I enjoy turning ideas into functional, visually appealing web applications. My passion lies in problem-solving and keeping up with the latest web technologies to deliver innovative solutions tailored to every project.</p>
-        </div>
-        <div class="col-md-6">
-          <img src="img/Screenshot 2025-01-08 123847.png" alt="About Us" class="img-fluid rounded">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center">Our Portfolio</h2>
-      <div class="row g-4">
-        <!-- Example 1 -->
-        <div class="col-md-4">
-          <div class="card portfolio-card">
-            <img src="img/BusinessWeb.png" alt="Website Example 1">
-            <div class="card-body">
-              <h5 class="card-title">Business Website</h5>
-              <p class="card-text">A modern and professional business site.</p>
-              <div>
-                <div class="color-swatch bg-primary"></div>
-                <div class="color-swatch bg-danger"></div>
-                <div class="color-swatch bg-success"></div>
-              </div>
+  <main class="container my-5">
+    <div class="row g-4">
+      <!-- Shoe 1 -->
+      <div class="col-md-4">
+        <div class="shoe-card">
+          <img src="img/red-sneakers.jpeg" alt="Red Shoe" class="shoe-image">
+          <div class="p-3">
+            <h5 class="shoe-title">Air Sneakers</h5>
+            <p class="price">$120.00</p>
+            <div>
+              <div class="color-swatch bg-danger" data-image="img/red-sneakers.jpeg"></div>
+              <div class="color-swatch bg-primary" data-image="img/blue.jpg"></div>
+              <div class="color-swatch bg-dark" data-image="img/blackshoe.jpg"></div>
             </div>
+            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
           </div>
         </div>
-        <!-- Example 2 -->
-        <div class="col-md-4">
-          <div class="card portfolio-card">
-            <img src="img/e-commerce.jpg" alt="Website Example 2">
-            <div class="card-body">
-              <h5 class="card-title">E-commerce Store</h5>
-              <p class="card-text">A sleek and user-friendly online shop.</p>
-              <div>
-                <div class="color-swatch bg-secondary"></div>
-                <div class="color-swatch bg-warning"></div>
-                <div class="color-swatch bg-info"></div>
-              </div>
+      </div>
+
+      <!-- Shoe 2 -->
+      <div class="col-md-4">
+        <div class="shoe-card">
+          <img src="img/green.jpg" alt="Green Shoe" class="shoe-image">
+          <div class="p-3">
+            <h5 class="shoe-title">Runner Pros</h5>
+            <p class="price">$150.00</p>
+            <div>
+              <div class="color-swatch bg-success" data-image="img/green.jpg"></div>
+              <div class="color-swatch bg-warning" data-image="img/yellow.jpg"></div>
+              <div class="color-swatch bg-secondary" data-image="img/grey.jpg"></div>
             </div>
+            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
           </div>
         </div>
-        <!-- Example 3 -->
-        <div class="col-md-4">
-          <div class="card portfolio-card">
-            <img src="img/Portfolio.png" alt="Website Example 3">
-            <div class="card-body">
-              <h5 class="card-title">Portfolio Website</h5>
-              <p class="card-text">Showcase your work with style.</p>
-              <div>
-                <div class="color-swatch bg-dark"></div>
-                <div class="color-swatch bg-light"></div>
-                <div class="color-swatch bg-primary"></div>
-              </div>
+      </div>
+
+      <!-- Shoe 3 -->
+      <div class="col-md-4">
+        <div class="shoe-card">
+          <img src="img/white.jpg" alt="White Shoe" class="shoe-image">
+          <div class="p-3">
+            <h5 class="shoe-title">Classic Walkers</h5>
+            <p class="price">$100.00</p>
+            <div>
+              <div class="color-swatch bg-light" data-image="img/white.jpg"></div>
+              <div class="color-swatch bg-danger" data-image="img/red.jpg"></div>
+              <div class="color-swatch bg-dark" data-image="img/a.jpg"></div>
             </div>
+            <button class="btn btn-primary btn-buy w-100">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Services Section -->
-  <section id="services" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4 text-center">
-          <h5>Custom Website Design</h5>
-          <p>We create unique designs tailored to your brand.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <h5>Responsive Development</h5>
-          <p>Your website will look great on any device.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <h5>E-commerce Solutions</h5>
-          <p>Build online stores that convert visitors into customers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center">Contact Us</h2>
-      <form>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name">
-          </div>
-          <div class="col-md-6">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Your Email">
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="How can we help you?"></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 WebDevPro. All rights reserved.</p>
+    <p>&copy; 2025 Shoe Store. All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add hover event to swatches
+    document.querySelectorAll('.color-swatch').forEach((swatch) => {
+      swatch.addEventListener('mouseover', function () {
+        const newImage = this.getAttribute('data-image');
+        const shoeCard = this.closest('.shoe-card');
+        const shoeImage = shoeCard.querySelector('.shoe-image');
+
+        // Change shoe image to the selected colorway
+        shoeImage.src = newImage;
+      });
+    });
+  </script>
 </body>
 </html>
